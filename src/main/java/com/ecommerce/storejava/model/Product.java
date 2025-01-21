@@ -10,9 +10,18 @@ import java.util.List;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @Entity
 public class Product {
+    public Product(String name, String brand, String description, BigDecimal price, int inventory, Category category) {
+        this.name = name;
+        this.brand = brand;
+        this.description = description;
+        this.price = price;
+        this.inventory = inventory;
+        this.category = category;
+    }
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
